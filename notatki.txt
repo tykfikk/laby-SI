@@ -1,0 +1,18 @@
+LABY 1
+
+czym się różni pandas i numpy?
+wczytanie za pomocą pandasa - ładna zorganizwoana tabelka
+numpy - macierz (czyli trzeba się samemu połapać co jest 5; wygląda bardziej chaotycznie)
+
+df - data frame
+
+warto sobi wyświetlić dane, zeby np zobaczyć, czy nie ma w nich braku
+
+int64 - liczba calkowita; zapisana za pomocą 64 bitow (0 i 1)
+
+plik z iris - czemu jest ważne, że każdy gatunek jest równolicznie reprezentowany? bo wtedy każdego gatunku nauczy się tak samo dobrze
+
+SVC a SVM
+podstawowa wada SVM - jest dla danych binarnych 
+SVC przestaje być binarny - czyli wykorzystanie SVM do większej ilości klas
++ ważne jest by wyodrębnić dane uczące oraz dane testowe (takie, których algorytm nigdy wcześniej nie widział

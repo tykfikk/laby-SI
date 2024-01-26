@@ -1,0 +1,16 @@
+sieci konwolucyjne
+
+- przetwarzanie obrazów
+- pierwsze warstwy sieci to warstwy konwolucyjne
+- każdy kolorowy obraz to macierz (a dokładnie trzech - bo każda z nich odpowiada jednej z barw RBG), a numery w nich odpowiadają natężeniu danego koloru; wyświetlanie w zakresie 0 - 255 (bo 2^8)
+- rozpatrują info przestrzenne i uczą się wyodrębniać cechy obrazów takie jak krawędzie
+- chcemy wydobyć z obrazów jakieś cechy (analogia do przetwarzania wzrokowego Marra)
+- posługujemy się zatem filtrami - podstawa przetwarzania (też są macierzami, najczęściej 3x3) - mnożenie kolejnych komórek przez warości z macierzy filtra 
+(przykład z pieskiem z SI)
+- niektóre z fltrów są znane i zrozumiałe, jak np. rozpoznanie linii pionowe, a niektóre działają w nieznany dla nas sposób 
+- zwyczajowa struktura: w. konwolucyjna, poolingowa (zmniejsza obrazek), w. konwolucyjna, poolingowa etc. (my będziemy korzystać z max pooling) 
+- aby obliczyć wartości dla komórek np. w rogach - otacza się obrazek zerami 
+
+po ostatniej warstwie poolingowej mamy flatten - wypłaszczamy sobie obrazek, zamieniamy go na ciąg liczb, a potem już dense i tak dalej 
+
+im więcej warstw konwolucyjnych tym więcej szczegółów sieć jest w stanie wyłapać (ale nie można przesadzać z ilością - bo sieć zafiksuje się na tych szczegółach) 
